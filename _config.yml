@@ -5,9 +5,9 @@ header-img: img/post-bg-desk.jpg
 email: 404player@gmail.com
 description: "Old con man never die.Our simle just fade away."
 keyword: "404player, 404player Blog, geekboy的博客, motianchen, 莫天尘, web, deep learing, security"
-url: "http://404player.github.io"          # your host, for absolute URL
+url: "http://404_player.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/404player/404player.github.io.git" # you code repository
+github_repo: "https://github.com/404player/404_player.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -52,24 +52,6 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
-
-
-
-# 评论系统
-# Disqus（https://disqus.com/）
-# disqus_username: 404player
-
-# Gitalk
-gitalk:
-  enable: true    #是否开启Gitalk评论
-  clientID: ba503d772da8c5d135a1                           #生成的clientID
-  clientSecret: 5dee681562674b9226468f5b9f2e6ee398dae191    #生成的clientSecret
-  repo: 404player.github.io    #仓库名称
-  owner: 404player    #github用户名
-  admin: 404player
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
-
-
 
 
 
