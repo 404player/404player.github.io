@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 高性能异步爬虫总结
-tags: [crawler，asynchronization，data analysis]
+tags: [crawler,asynchronization,data analysis]
 lastUpdate: 2020-02-29
 author: 404player
 header-img: img/post-bg-crawler.jpg  
