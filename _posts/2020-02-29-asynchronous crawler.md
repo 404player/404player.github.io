@@ -59,8 +59,8 @@ def request(url):
     print('下载成功',url)
 start = time.time()
 urls = ['www.baidu.com','www.sogou.com','www.goubanjia.com']
-# for url in urls:
-#     request(url)
+# for url in urls:  
+#     request(url)  
 pool = Pool(3)
 pool.map(request,urls)
 print(time.time()-start)
@@ -111,22 +111,22 @@ print(time.time()-start)
 现在对这些概念还不甚理解没有关系，下面我们通过一个程序来对上面所说的东西进行一个实例化的说明  
 
 ```python
-import asyncio #导入asyncio模块  
+import asyncio #导入asyncio模块    
 
-#使用async来定义特殊函数，此特殊函数便是一个协程
+#使用async来定义特殊函数，此特殊函数便是一个协程   
 async def request(url):
     print('正在请求：',url)
     print('下载成功',url)  
       
-c = request('www.baidu.com') #实例化一个协程  
+c = request('www.baidu.com') #实例化一个协程   
 #注意实例化协程的时候函数并不会执行  
   
-task = asyncio.ensure_future(c) #实例化一个任务对象task进一步封装协程c  
+task = asyncio.ensure_future(c) #实例化一个任务对象task进一步封装协程c    
   
-loop = asyncio.get_event_loop() #创建一个事件循环对象  
+loop = asyncio.get_event_loop() #创建一个事件循环对象    
   
-loop.run_until_complete(task) #将任务对象注册到事件循环对象中  
-#注意：实例化事件循环对象的时候，同时也会启动事件循环对象，换言之，就是会执行特殊函数
+loop.run_until_complete(task) #将任务对象注册到事件循环对象中    
+#注意：实例化事件循环对象的时候，同时也会启动事件循环对象，换言之，就是会执行特殊函数  
 ```  
   
 我们来看看执行结果：  
@@ -143,13 +143,13 @@ from time import sleep
 import time
 urls = ['www.baidu.com','www.sogou.com','www.goubanjia.com']
 start = time.time()
-async def request(url):
-    print('正在请求：',url)
-    #在多任务异步协程实现中，不可以出现不支持异步的相关代码
-    #sleep(2)  #time模块不支持异步
+async def request(url):  
+    print('正在请求：',url)  
+    #在多任务异步协程实现中，不可以出现不支持异步的相关代码  
+    #sleep(2)  #time模块不支持异步  
     await asyncio.sleep(2)
     print('下载成功',url)
- #创建事件循环对象
+ #创建事件循环对象  
 loop = asyncio.get_event_loop()
 #任务列表：放置多个任务对象
 tasks = []
@@ -158,7 +158,7 @@ for url in urls:
     task = asyncio.ensure_future(c)
     tasks.append(task)
 
-loop.run_until_complete(asyncio.wait(tasks))
+loop.run_until_complete(asyncio.await(tasks))
 print(time.time()-start)
 ```  
 解释一下这个程序跟上一个程序细节上的差异  
