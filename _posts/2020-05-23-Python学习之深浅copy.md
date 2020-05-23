@@ -20,9 +20,9 @@ tags: [Python]
   
 ```python
 import copy  
-p1 = copy.copy(person) #浅copy  
-p2 = person[:] #浅copy
-p3 = list(person) #浅copy
+p1 = copy.copy(person) #浅copy    
+p2 = person[:] #浅copy    
+p3 = list(person) #浅copy  
 ```   
   
 我们通过例子可以看到，进行`浅copy`一共有三种方式：  
